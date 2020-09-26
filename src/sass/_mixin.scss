@@ -1,0 +1,17 @@
+$bx:1200px;
+@mixin zb($z, $b) {
+    color: $z;
+    background-color: $b;
+}
+
+;
+@mixin bc($u, $t, $f) {
+    background: url($u) no-repeat $t $f;
+}
+
+;
+@mixin sl {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}

@@ -1,0 +1,94 @@
+.sejianbox {
+    width: $bx;
+    height: 592px;
+    background-color: chartreuse;
+    .sejianbox-nav {
+        width: $bx;
+        height: 40px;
+        background-color: aqua;
+        display: flex;
+        justify-content: space-between;
+        border-bottom: 1px solid #ff7b30;
+        .nav-box {
+            display: flex;
+            .nav-ys {
+                width: 5px;
+                height: 25px;
+                background: #ff7b30;
+                margin-top: 3px;
+            }
+            h3 {
+                color: #ff7b30;
+                margin-left: 15px;
+                margin-right: 10px;
+                font-size: 22px;
+            }
+            .nav-wz {
+                min-width: 294px;
+                height: 16px;
+                margin-top: 10px;
+                display: flex;
+                a {
+                    margin-left: 10px;
+                    font-size: 14px;
+                    color: #99999b;
+                }
+            }
+        }
+        .nav-zb {
+            display: flex;
+            a {
+                font-size: 14px;
+                color: #333;
+                line-height: 35px;
+            }
+            .nav-tb {
+                width: 18px;
+                height: 18px;
+                @include bc('../img/sprite_channel3.png', -90px, -158px);
+                margin-top: 8px;
+            }
+        }
+    }
+    .sejianbox-main {
+        width: $bx;
+        height: 550px;
+        display: flex;
+        justify-content: space-between;
+        img {
+            width: 270px;
+            height: 550px;
+        }
+        .sp-list {
+            width: 930px;
+            height: 550px;
+            list-style: none;
+            display: flex;
+            flex-wrap: wrap;
+            li {
+                width: 202px;
+                height: 250px;
+                padding: 10px;
+                margin-bottom: 10px;
+                margin-left: 10px;
+                img {
+                    width: 200px;
+                    height: 200px;
+                }
+                a {
+                    display: block;
+                    font-size: 14px;
+                    margin-top: 10px;
+                    color: #000;
+                    @include sl;
+                }
+                p {
+                    font-size: 18px;
+                    color: #c52e13;
+                    display: flex;
+                    justify-content: center;
+                }
+            }
+        }
+    }
+}

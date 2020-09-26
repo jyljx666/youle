@@ -1,0 +1,21 @@
+#mod-topslide {
+    width: 100%;
+    height: 467px;
+    background-color: burlywood;
+    display: flex;
+    justify-content: center;
+    .carousel {
+        width: $bx;
+        height: 467px;
+        background-color: aquamarine;
+        ul {
+            width: 100%;
+            height: 467px;
+            list-style: none;
+            img {
+                width: $bx;
+                height: 467px;
+            }
+        }
+    }
+}
