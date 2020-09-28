@@ -1,0 +1,51 @@
+#floatTool {
+    width: 32px;
+    height: 335px;
+    position: fixed;
+    left: 50%;
+    bottom: 25px;
+    margin-left: -660px;
+    display: none;
+    ul {
+        list-style: none;
+        .zt-ys {
+            color: #fff;
+        }
+        li {
+            color: #999;
+            width: 32px;
+            height: 32px;
+            margin: 10px 0;
+            font-size: 12px;
+            cursor: pointer;
+            border-bottom: dotted 1px #ccc;
+            text-align: center;
+        }
+        li:nth-child(1):hover {
+            background-color: #ff7b30;
+            color: #fff;
+        }
+        li:nth-child(2):hover {
+            background-color: #1bb145;
+            color: #fff;
+        }
+        li:nth-child(3):hover {
+            background-color: #2289ff;
+            color: #fff;
+        }
+        li:nth-child(4):hover {
+            background-color: #010101;
+            color: #fff;
+        }
+        li:nth-child(5):hover {
+            background-color: #ff2f91;
+            color: #fff;
+        }
+    }
+    .fhdb {
+        width: 32px;
+        height: 40px;
+        margin-top: 5px;
+        @include bc ('../img/returntop2.png', 4px, 8px)
+    }
+}

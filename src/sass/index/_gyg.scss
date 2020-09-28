@@ -1,0 +1,86 @@
+.gyg {
+    width: $bx;
+    min-height: 500px;
+    .gyg-title {
+        font-size: 22px;
+        color: #333;
+        font-weight: 900;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+    .gyg-sp {
+        width: $bx;
+        min-height: 270px;
+        list-style: none;
+        display: flex;
+        flex-wrap: wrap;
+        li:hover {
+            box-shadow: 0 15px 30px rgba(0, 0, 0, .1);
+            transform: translate3d(0, -2px, 0);
+        }
+        li {
+            width: 200px;
+            height: 280px;
+            padding: 15px;
+            margin: 6px;
+            background-color: #fff;
+            >img {
+                width: 200px;
+                height: 200px;
+            }
+            >a {
+                display: block;
+                font-size: 14px;
+                color: #333;
+                @include sl;
+            }
+            .prod-price {
+                width: 200px;
+                height: 20px;
+                margin-top: 5px;
+                display: flex;
+                justify-content: space-between;
+            }
+            .prod-price-zb {
+                font-size: 18px;
+                color: #c52e13;
+            }
+            .prod-price-yb {
+                display: flex;
+                align-items: center;
+                color: #3d2d20;
+                font-size: 14px;
+                span {
+                    display: inline-block;
+                    width: 17px;
+                    height: 17px;
+                    @include bc('../img/ule-vip1.png', 0px, 0px);
+                    margin-right: 5px;
+                }
+            }
+            .sp-cd {
+                display: flex;
+                justify-content: space-between;
+                margin-top: 5px;
+                span {
+                    color: #666;
+                    font-size: 12px;
+                }
+            }
+        }
+        li:nth-child(5n+1) {
+            margin-left: 0;
+        }
+        li:nth-child(5n) {
+            margin-right: 0;
+        }
+    }
+    .gyg-end {
+        width: $bx;
+        height: 30px;
+        margin-top: 35px;
+        margin-bottom: 30px;
+        display: flex;
+        justify-content: center;
+    }
+}

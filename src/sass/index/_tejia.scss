@@ -1,7 +1,6 @@
 #tejia {
     width: $bx;
     height: 338px;
-    background-color: chocolate;
     margin-top: 20px;
     margin-bottom: 20px;
     .tejia-nav {
@@ -25,8 +24,16 @@
                 margin-right: 5px;
             }
         }
+        .tj-av {
+            height: 51px;
+            line-height: 50px;
+            padding-bottom: 0;
+            border-bottom: solid 1px #c5181c;
+            background: #fdf3f2;
+            color: #d63334;
+        }
         .nav-btn1>span {
-            @include bc('../img/sprite_category2018.png', -24px, 0px);
+            @include bc('../img/sprite_category2018.png', 0, 0px);
         }
         .nav-btn2>span {
             @include bc('../img/sprite_category2018.png', -104px, 0px);
@@ -41,7 +48,6 @@
         ul {
             width: $bx;
             min-height: 285px;
-            background-color: aqua;
             list-style: none;
             position: absolute;
             left: 0;
