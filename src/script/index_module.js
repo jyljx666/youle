@@ -1,4 +1,4 @@
-define(['jquery'], function() {
+define(['jquery', 'lazyload'], function() {
     return {
         init: function() {
 
@@ -31,7 +31,7 @@ define(['jquery'], function() {
                         for (let obj of res) {
                             str += `
                             <li>
-                            <img src="${obj.url}" alt="">
+                            <img data-original="${obj.url}" alt="" class="lazy">
                             <a href="">${obj.title}</a>
                             <div class="prod-price">
                                 <div class="prod-price-zb">
@@ -50,6 +50,10 @@ define(['jquery'], function() {
                             `
                         }
                         $('.gyg-sp').html(str)
+                            //懒加载
+                        $("img.lazy").lazyload({
+                            effect: "fadeIn" //图片显示方式
+                        });
                     }
                     gyg()
                 }
@@ -111,6 +115,8 @@ define(['jquery'], function() {
             } else {
                 $('#floatTool')[0].style.display = 'none'
             }
+
+
 
 
             $(window).on('scroll', function() {
@@ -183,9 +189,9 @@ define(['jquery'], function() {
                             //     opacity: 0
                             // })
                     }
-                    $('.carousel>ul>li').eq(index).animate({
+                    $('.carousel>ul>li').eq(index).css({
                         opacity: 1
-                    }).siblings().animate({
+                    }).siblings().css({
                         opacity: 0
                     })
                     $('.lb-box>li').eq(index).addClass('lb-bj').siblings().removeClass('lb-bj')
@@ -210,9 +216,9 @@ define(['jquery'], function() {
                         if (index > $('.carousel>ul>li').length - 1) {
                             index = 0
                         }
-                        $('.carousel>ul>li').eq(index).animate({
+                        $('.carousel>ul>li').eq(index).css({
                             opacity: 1
-                        }).siblings().animate({
+                        }).siblings().css({
                             opacity: 0
                         })
                         $('.lb-box>li').eq(index).addClass('lb-bj').siblings().removeClass('lb-bj')
@@ -220,44 +226,66 @@ define(['jquery'], function() {
                     }, 2000)
                 })
 
-            }
-            //改变背景颜色的检查
-            function jc() {
-                switch (index) {
-                    case 0:
-                        $('#mod-topslide').css({ backgroundColor: '#ee6900' })
-                        break;
-                    case 1:
-                        $('#mod-topslide').css({ backgroundColor: '#eb8203' })
-                        break;
-                    case 2:
-                        $('#mod-topslide').css({ backgroundColor: '#e75607' })
-                        break;
-                    case 3:
-                        $('#mod-topslide').css({ backgroundColor: '#6b01c7' })
-                        break;
-                    case 4:
-                        $('#mod-topslide').css({ backgroundColor: '#fea525' })
-                        break;
-                    case 5:
-                        $('#mod-topslide').css({ backgroundColor: '#fcf197' })
-                        break;
-                    case 6:
-                        $('#mod-topslide').css({ backgroundColor: '#ffa08c' })
-                        break;
-                    case 7:
-                        $('#mod-topslide').css({ backgroundColor: '#8e3c26' })
-                        break;
-                    case 8:
-                        $('#mod-topslide').css({ backgroundColor: '#0193e6' })
-                        break;
-                    case 9:
-                        $('#mod-topslide').css({ backgroundColor: '#22449d' })
-                        break;
 
+                //改变背景颜色的检查
+                function jc() {
+                    switch (index) {
+                        case 0:
+                            $('#mod-topslide').css({ backgroundColor: '#ee6900' })
+                            break;
+                        case 1:
+                            $('#mod-topslide').css({ backgroundColor: '#eb8203' })
+                            break;
+                        case 2:
+                            $('#mod-topslide').css({ backgroundColor: '#e75607' })
+                            break;
+                        case 3:
+                            $('#mod-topslide').css({ backgroundColor: '#6b01c7' })
+                            break;
+                        case 4:
+                            $('#mod-topslide').css({ backgroundColor: '#fea525' })
+                            break;
+                        case 5:
+                            $('#mod-topslide').css({ backgroundColor: '#fcf197' })
+                            break;
+                        case 6:
+                            $('#mod-topslide').css({ backgroundColor: '#ffa08c' })
+                            break;
+                        case 7:
+                            $('#mod-topslide').css({ backgroundColor: '#8e3c26' })
+                            break;
+                        case 8:
+                            $('#mod-topslide').css({ backgroundColor: '#0193e6' })
+                            break;
+                        case 9:
+                            $('#mod-topslide').css({ backgroundColor: '#22449d' })
+                            break;
+
+                    }
                 }
+
             }
+            //调用轮播
             lb()
+
+
+            //顶部导航栏
+            if ($(window).scrollTop() > $('#mod-topslide').height() + $('#mod-topslide').offset().top) {
+                $('.fixed-menu').show()
+            } else {
+                $('.fixed-menu').hide()
+            }
+
+
+
+            $(window).on('scroll', function() {
+                if ($(window).scrollTop() > $('#mod-topslide').height() + $('#mod-topslide').offset().top) {
+                    $('.fixed-menu').show()
+                } else {
+                    $('.fixed-menu').hide()
+                }
+            })
+
         }
 
 

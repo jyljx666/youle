@@ -64,6 +64,13 @@
                     align-items: center;
                 }
             }
+            .reg-btn {
+                height: 40px;
+                width: 302px;
+                margin-left: 50px;
+                background-color: #333;
+                @include bc ('../img/icon.jpg', 0px, -141px)
+            }
         }
     }
 }

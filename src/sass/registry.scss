@@ -1,5 +1,6 @@
 @charset 'utf-8';
 @import './mixin';
-@import'warp';
-@import 'header';
-@import 'reg';
+@import'./reg/warp';
+@import './reg/header';
+@import './reg/reg';
+@import'./reg/_footer'
