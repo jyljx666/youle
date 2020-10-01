@@ -563,6 +563,7 @@
 }
 
 .detail-main .preview {
+  position: relative;
   width: 398px;
   height: 497px;
   margin: 20px 20px 0;
@@ -589,7 +590,7 @@
 
 .detail-main .preview .sp-box .sp-zb {
   float: left;
-  background: url("https://i0.ulecdn.com/i/vi/2014/0730/bg-arrow.gif") no-repeat -22px 22px;
+  background: url("https://i0.ulecdn.com/i/vi/2014/0730/bg-arrow.gif") no-repeat 0px 22px;
 }
 
 .detail-main .preview .sp-box .sp-yb {
@@ -612,7 +613,6 @@
   position: absolute;
   left: 0px;
   top: 0px;
-  background-color: blue;
 }
 
 .detail-main .preview .sp-box .sp-qj .sp-hf li {
@@ -656,7 +656,8 @@
 .detail-main .productInfo .pi_detail {
   margin-top: 10px;
   width: 573px;
-  height: 174px;
+  min-height: 174px;
+  margin-bottom: 20px;
 }
 
 .detail-main .productInfo .pi_detail .ww {
@@ -847,7 +848,7 @@
   font-weight: 700;
 }
 
-.detail-main .productInfo .pi_detail .sp-yj {
+.detail-main .productInfo .pi_detail .sp-zj {
   width: 573px;
   height: 20px;
   line-height: 20px;
@@ -861,12 +862,189 @@
           align-items: flex-start;
 }
 
-.detail-main .productInfo .pi_detail .sp-yj .yj-ys {
+.detail-main .productInfo .pi_detail .sp-zj .zj-ys {
   color: #B30808;
   font-weight: 800;
 }
 
-.detail-main .productInfo .pi_detail .sp-yj .yj-ys span {
+.detail-main .productInfo .pi_detail .sp-zj .zj-ys span {
   color: #B30808;
   font-weight: 800;
+}
+
+.detail-main .productInfo #gwc {
+  color: #fff;
+  background: #d10208;
+  width: 128px;
+  height: 40px;
+  text-align: center;
+  line-height: 40px;
+  font-weight: bold;
+  font-size: 14px;
+  float: left;
+  margin-left: 58px;
+  margin-top: 33px;
+  margin-right: 10px;
+}
+
+.detail-main .productInfo #yhgm {
+  margin-top: 33px;
+  width: 128px;
+  height: 40px;
+  background: #f6730b;
+  text-indent: 0;
+  font-size: 14px;
+  color: #fff;
+  text-align: center;
+  line-height: 40px;
+  font-weight: bold;
+  float: left;
+}
+
+.detail-main .productInfo .goods_info {
+  clear: both;
+  color: #b4b4b4;
+  font-size: 12px;
+  padding-top: 40px;
+}
+
+hr {
+  height: 1px;
+  border: none;
+  background-color: #ccc !important;
+}
+
+.sp-fd {
+  width: 398px;
+  height: 398px;
+  position: absolute;
+  top: 0;
+  left: 398px;
+  overflow: hidden;
+  display: none;
+}
+
+.sp-fd img {
+  width: 800px;
+  height: 800px;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.sp-fx {
+  width: 100px;
+  height: 100px;
+  background-color: rgba(246, 115, 11, 0.3);
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  display: none;
+}
+
+.sp-sp-box {
+  width: 398px;
+  height: 413px;
+}
+
+.footer {
+  width: 100%;
+  background-color: #fff;
+  height: 442px;
+  padding-top: 30px;
+  padding-bottom: 20px;
+}
+
+.footer .footer-nav {
+  width: 1200px;
+  height: 56px;
+  border: solid 1px #ddd;
+  border-width: 1px 0;
+  padding: 17px 0;
+  margin: 0 auto;
+  background: url("../img/footer1603.png") no-repeat 0px -124px;
+}
+
+.footer .footer-main {
+  margin: 0 auto;
+  width: 1200px;
+  height: 209px;
+  padding: 10px 0 20px;
+  text-align: center;
+  border-bottom: solid 1px #ddd;
+}
+
+.footer .footer-main > div {
+  width: 120px;
+  margin-right: 96px;
+  margin-top: 5px;
+  float: left;
+}
+
+.footer .footer-main > div > h4 {
+  font-size: 12px;
+  color: #666;
+  line-height: 22px;
+  margin: 0 0 5px;
+  border-bottom: dotted 1px #ccc;
+  text-align: left;
+}
+
+.footer .footer-main > div p {
+  width: 120px;
+}
+
+.footer .footer-main > div p a {
+  display: inline-block;
+  width: 120px;
+  height: 22px;
+  font-size: 12px;
+  line-height: 22px;
+  text-align: left;
+  color: #888;
+}
+
+.footer .footer-main > div:nth-child(6) {
+  margin-right: 0;
+}
+
+.footer .foot-license {
+  width: 1200px;
+  height: 20px;
+  line-height: 20px;
+  padding: 15px 0 5px;
+  text-align: center;
+  color: #999;
+  margin: 0 auto;
+  list-style: none;
+}
+
+.footer .foot-license li {
+  font-size: 12px;
+  margin-right: 9px;
+  float: left;
+}
+
+.footer .foot-dd {
+  width: 1200px;
+  height: 20px;
+  text-align: center;
+  color: #999;
+  margin: 0 auto;
+  list-style: none;
+  line-height: 20px;
+}
+
+.footer .foot-dd li {
+  font-size: 12px;
+  margin-right: 9px;
+  float: left;
+}
+
+.footer .foot-iconlink {
+  width: 1200px;
+  height: 34px;
+  margin: 0 auto;
+  margin-top: 15px;
+  background: url("../img/footer1603.png") no-repeat 0px 0px;
 }

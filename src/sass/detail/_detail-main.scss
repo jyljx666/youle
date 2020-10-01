@@ -4,6 +4,7 @@
     border: 1px solid #e9e9e9;
     background-color: #fff;
     .preview {
+        position: relative;
         width: 398px;
         height: 497px;
         margin: 20px 20px 0;
@@ -13,6 +14,7 @@
             width: 398px;
             height: 398px;
             margin-bottom: 15px;
+            // cursor: crosshair;
         }
         .sp-box {
             width: 400px;
@@ -24,7 +26,7 @@
             }
             .sp-zb {
                 float: left;
-                @include bc ('https://i0.ulecdn.com/i/vi/2014/0730/bg-arrow.gif', -22px, 22px);
+                @include bc ('https://i0.ulecdn.com/i/vi/2014/0730/bg-arrow.gif', 0px, 22px);
             }
             .sp-yb {
                 float: right;
@@ -43,7 +45,6 @@
                     position: absolute;
                     left: 0px;
                     top: 0px;
-                    background-color: blue;
                 }
                 .sp-hf li {
                     width: 76px;
@@ -82,7 +83,8 @@
         .pi_detail {
             margin-top: 10px;
             width: 573px;
-            height: 174px;
+            min-height: 174px;
+            margin-bottom: 20px;
             .ww {
                 width: 58px;
                 font-size: 12px;
@@ -237,7 +239,7 @@
                     }
                 }
             }
-            .sp-yj {
+            .sp-zj {
                 width: 573px;
                 height: 20px;
                 line-height: 20px;
@@ -245,7 +247,7 @@
                 font-size: 14px;
                 display: flex;
                 align-items: flex-start;
-                .yj-ys {
+                .zj-ys {
                     color: #B30808;
                     font-weight: 800;
                     span {
@@ -255,5 +257,76 @@
                 }
             }
         }
+        #gwc {
+            color: #fff;
+            background: #d10208;
+            width: 128px;
+            height: 40px;
+            text-align: center;
+            line-height: 40px;
+            font-weight: bold;
+            font-size: 14px;
+            float: left;
+            margin-left: 58px;
+            margin-top: 33px;
+            margin-right: 10px;
+        }
+        #yhgm {
+            margin-top: 33px;
+            width: 128px;
+            height: 40px;
+            background: #f6730b;
+            text-indent: 0;
+            font-size: 14px;
+            color: #fff;
+            text-align: center;
+            line-height: 40px;
+            font-weight: bold;
+            float: left;
+        }
+        .goods_info {
+            clear: both;
+            color: #b4b4b4;
+            font-size: 12px;
+            padding-top: 40px;
+        }
     }
+}
+
+hr {
+    height: 1px;
+    border: none;
+    background-color: #ccc !important;
+}
+
+.sp-fd {
+    width: 398px;
+    height: 398px;
+    position: absolute;
+    top: 0;
+    left: 398px;
+    overflow: hidden;
+    display: none;
+    img {
+        width: 800px;
+        height: 800px;
+        position: absolute;
+        left: 0;
+        top: 0;
+    }
+}
+
+.sp-fx {
+    width: 100px;
+    height: 100px;
+    background-color: rgba($color: #f6730b, $alpha: 0.3);
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    display: none;
+}
+
+.sp-sp-box {
+    width: 398px;
+    height: 413px;
 }
