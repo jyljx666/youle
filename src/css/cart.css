@@ -365,7 +365,9 @@
   height: 80px;
   line-height: 22px;
   font-size: 14px;
-  margin-left: 178px;
+  width: 150px;
+  margin-left: 60px;
+  text-align: right;
 }
 
 .mycart .cart-main .cart-nav .item-count {
@@ -591,6 +593,10 @@
   border: solid 1px #bbb;
   border-radius: 4px;
   color: #666;
+}
+
+.js {
+  opacity: 0.3;
 }
 
 .footer {

@@ -159,6 +159,11 @@ define(['jquery', 'lazyload', 'pagination'], function() {
                 }
             })
 
+
+            $('.shopcart-sum').on('click', function() {
+                location.href = "http://127.0.0.1/youle/projectname/src/cart.html"
+            })
+
         }
     }
 })

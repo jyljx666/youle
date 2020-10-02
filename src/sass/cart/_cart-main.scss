@@ -105,7 +105,9 @@
                 height: 80px;
                 line-height: 22px;
                 font-size: 14px;
-                margin-left: 178px;
+                width: 150px;
+                margin-left: 60px;
+                text-align: right;
             }
             .item-count {
                 margin-left: 91px;
@@ -308,4 +310,8 @@
             color: #666;
         }
     }
+}
+
+.js {
+    opacity: 0.3;
 }
