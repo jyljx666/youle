@@ -14,6 +14,18 @@
           align-items: center;
 }
 
+.t {
+  display: none;
+}
+
+.d {
+  color: #06c;
+}
+
+.z {
+  color: #06c;
+}
+
 * {
   padding: 0;
   margin: 0;

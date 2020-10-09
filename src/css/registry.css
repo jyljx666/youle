@@ -284,6 +284,11 @@
   height: 340px;
 }
 
+#register .register-box .reg-main span {
+  line-height: 40px;
+  color: red;
+}
+
 #register .register-box .reg-main .main-box {
   width: 700px;
   height: 340px;

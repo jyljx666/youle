@@ -1,0 +1,109 @@
+.wrapper-box {
+    width: $bx;
+    height: 495px;
+    background: url(../img/c64812dced744da4_-1x-1.jpg);
+}
+
+.login-form {
+    width: 332px;
+    background-color: #FFF;
+    border-radius: 3px;
+    top: 5px;
+    box-shadow: #999 0px 0px 2px;
+    height: 485px;
+    float: right;
+    margin-top: 5px;
+    margin-right: 120px;
+    .box-title {
+        font-family: "microsoft yahei";
+        font-size: 16px;
+        font-weight: bold;
+        color: #333;
+        margin: 18px 0 26px 15px;
+        position: relative;
+        div {
+            position: absolute;
+            background: url('../img/icon_zjl_001.png') -90px 0 no-repeat;
+            height: 70px;
+            width: 70px;
+            cursor: pointer;
+            right: 0px;
+            top: -19px;
+        }
+    }
+    .email-wrap {
+        height: 62px;
+        position: relative;
+        .email-icon {
+            position: absolute;
+            display: block;
+            height: 38px;
+            width: 23px;
+            left: 21px;
+            top: 0;
+            background: url('../img/login_icons.png') no-repeat 0px -85px;
+        }
+        #username {
+            width: 277px;
+            height: 18px;
+            line-height: 18px;
+            padding: 10px 0 10px 23px;
+            border: 1px solid #cacaca;
+            font-size: 14px;
+            margin: 0 0 0 15px;
+        }
+    }
+    .paw-wrap {
+        height: 62px;
+        position: relative;
+        .paw-icon {
+            position: absolute;
+            display: block;
+            height: 38px;
+            width: 23px;
+            left: 21px;
+            top: 0;
+            background: url('../img/login_icons.png') no-repeat 0px -118px;
+        }
+        #password {
+            width: 277px;
+            height: 18px;
+            line-height: 18px;
+            padding: 10px 0 10px 23px;
+            border: 1px solid #cacaca;
+            font-size: 14px;
+            margin: 0 0 0 15px;
+        }
+    }
+    .autologin {
+        color: #656567;
+        line-height: 20px;
+        cursor: default;
+        font-size: 12px;
+        padding: 0 0 10px 12px;
+        position: relative;
+        width: 309px;
+    }
+    .formSubmit {
+        padding: 0;
+        margin: 0;
+        margin-left: 15px;
+        background: none;
+        width: 302px;
+        color: #fff;
+        border: 1px solid #a71427;
+        background-color: #d10208;
+        height: 38px;
+        line-height: 36px;
+        text-align: center;
+        border-radius: 3px;
+        font-family: "microsoft yahei";
+        font-size: 16px;
+    }
+    .zhuce {
+        padding: 10px 14px 0 0;
+        float: right;
+        color: #1675be;
+        font-size: 12px;
+    }
+}

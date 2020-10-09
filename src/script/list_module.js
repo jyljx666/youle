@@ -160,8 +160,36 @@ define(['jquery', 'lazyload', 'pagination'], function() {
             })
 
 
+            if (cookie.get('shanp')) {
+                let shanp = cookie.get('shanp')
+                let sl = null
+                shanp = JSON.parse(shanp)
+                console.log(shanp)
+                shanp.forEach(function(elm) {
+                    sl += elm.num
+                })
+                $('.shopcart-sum span').text(sl)
+            } else {
+                $('.shopcart-sum span').text(0)
+            }
+
             $('.shopcart-sum').on('click', function() {
                 location.href = "http://127.0.0.1/youle/projectname/src/cart.html"
+            })
+
+
+            //登录状态判断
+            if (localStorage.getItem('user')) {
+                let user = localStorage.getItem('user')
+                user = JSON.parse(user)
+                $('.user').text(user.username)
+                $('.d').hide()
+                $('.z').hide()
+                $('.t').show()
+            }
+            //退出功能
+            $('.t').on('click', function() {
+                localStorage.removeItem('user')
             })
 
         }

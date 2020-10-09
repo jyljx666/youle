@@ -17,7 +17,7 @@ define(['jquery', 'lazyload'], function() {
                             str += `
                             <li>
                             <img src="${res[i].url}" alt="">
-                            <a href="">${res[i].title}</a>
+                            <a href="http://127.0.0.1/youle/projectname/src/detail.html?sid=${res[i].sid}">${res[i].title}</a>
                             <p>￥<span>${res[i].price}</span></p>
                             </li>
                             `
@@ -32,7 +32,7 @@ define(['jquery', 'lazyload'], function() {
                             str += `
                             <li>
                             <img data-original="${obj.url}" alt="" class="lazy">
-                            <a href="">${obj.title}</a>
+                            <a href="http://127.0.0.1/youle/projectname/src/detail.html?sid=${obj.sid}">${obj.title}</a>
                             <div class="prod-price">
                                 <div class="prod-price-zb">
                                     ￥${obj.price}
@@ -285,6 +285,40 @@ define(['jquery', 'lazyload'], function() {
                     $('.fixed-menu').hide()
                 }
             })
+
+
+            //登录状态判断
+            if (localStorage.getItem('user')) {
+                let user = localStorage.getItem('user')
+                user = JSON.parse(user)
+                $('.user').text(user.username)
+                $('.d').hide()
+                $('.z').hide()
+                $('.t').show()
+            }
+            //退出功能
+            $('.t').on('click', function() {
+                localStorage.removeItem('user')
+            })
+
+
+            if (cookie.get('shanp')) {
+                let shanp = cookie.get('shanp')
+                let sl = null
+                shanp = JSON.parse(shanp)
+                console.log(shanp)
+                shanp.forEach(function(elm) {
+                    sl += elm.num
+                })
+                $('.shopcart-sum span').text(sl)
+            } else {
+                $('.shopcart-sum span').text(0)
+            }
+
+            $('.shopcart-sum').on('click', function() {
+                location.href = "http://127.0.0.1/youle/projectname/src/cart.html"
+            })
+
 
         }
 

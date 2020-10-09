@@ -3,12 +3,18 @@ define(['jquery', 'cookie'], function($, cookie) {
     return {
         init: function() {
 
-            let shanp = JSON.parse(cookie.get('shanp'))
-            let arr = shanp.map(function(elm) {
-                return elm.sid
-            })
-            let idlist = arr.join(',')
-
+            let shanp = cookie.get('shanp')
+            let arr = null
+            let idlist = null
+            if (shanp) {
+                shanp = JSON.parse(shanp)
+                arr = shanp.map(function(elm) {
+                    return elm.sid
+                })
+                idlist = arr.join(',')
+            } else {
+                alert('还没有添加商品到购物车')
+            }
             $.ajax({
                 type: "post",
                 url: "http://127.0.0.1/youle/projectname/php/cart.php",
@@ -79,6 +85,7 @@ define(['jquery', 'cookie'], function($, cookie) {
 
                 console.log($(this).parent().parent().prev().find('span').text())
                 js()
+                js2()
             })
 
 
@@ -204,6 +211,26 @@ define(['jquery', 'cookie'], function($, cookie) {
                 js()
                 js2()
             })
+
+
+            //登录状态判断
+            if (localStorage.getItem('user')) {
+                let user = localStorage.getItem('user')
+                user = JSON.parse(user)
+                $('.user').text(user.username)
+                $('.d').hide()
+                $('.z').hide()
+                $('.t').show()
+            }
+            //退出功能
+            $('.t').on('click', function() {
+                localStorage.removeItem('user')
+            })
+
+
+
+
+
 
 
         }

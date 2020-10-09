@@ -36,6 +36,13 @@ define(["jquery", "cookie"], function($, cookie) {
                     $(".dt").attr({
                         src: tps[0],
                     });
+
+
+                    console.log($(".sp-hf").find('li'))
+                    if ($(".sp-hf>li").length < 6) {
+                        $(".sp-zb").hide();
+                        $(".sp-yb").hide();
+                    }
                 },
             });
 
@@ -113,7 +120,8 @@ define(["jquery", "cookie"], function($, cookie) {
                 console.log($(this).find("img").attr("src"));
                 let src = $(this).find("img").attr("src");
                 console.log(src);
-
+                $(this).find('img').addClass('xzxz')
+                $(this).siblings().find('img').removeClass('xzxz')
                 $(".xt").attr({
                     src: src,
                 });
@@ -169,10 +177,7 @@ define(["jquery", "cookie"], function($, cookie) {
             }
             yd();
 
-            if ($("sp-hf>li").size() < 6) {
-                $(".sp-zb").hide();
-                $(".sp-yb").hide();
-            }
+
             //加数量
             $(".sl-jr").on("click", function() {
                 console.log($(".sl").val());
@@ -217,6 +222,39 @@ define(["jquery", "cookie"], function($, cookie) {
 
                 cookie.set('shanp', JSON.stringify(shanp), 1)
             }
+
+
+            //登录状态判断
+            if (localStorage.getItem('user')) {
+                let user = localStorage.getItem('user')
+                user = JSON.parse(user)
+                $('.user').text(user.username)
+                $('.d').hide()
+                $('.z').hide()
+                $('.t').show()
+            }
+            //退出功能
+            $('.t').on('click', function() {
+                localStorage.removeItem('user')
+            })
+
+
+            if (cookie.get('shanp')) {
+                let shanp = cookie.get('shanp')
+                let sl = null
+                shanp = JSON.parse(shanp)
+                console.log(shanp)
+                shanp.forEach(function(elm) {
+                    sl += elm.num
+                })
+                $('.shopcart-sum span').text(sl)
+            } else {
+                $('.shopcart-sum span').text(0)
+            }
+
+            $('.shopcart-sum').on('click', function() {
+                location.href = "http://127.0.0.1/youle/projectname/src/cart.html"
+            })
         }
     };
 });

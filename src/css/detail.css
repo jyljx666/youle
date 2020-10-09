@@ -15,6 +15,23 @@
           align-items: center;
 }
 
+.xzxz {
+  border: 2px solid #c00 !important;
+  padding: 1px !important;
+}
+
+.t {
+  display: none;
+}
+
+.d {
+  color: #06c;
+}
+
+.z {
+  color: #06c;
+}
+
 * {
   padding: 0;
   margin: 0;
@@ -609,7 +626,7 @@
 .detail-main .preview .sp-box .sp-qj .sp-hf {
   height: 60px;
   list-style: none;
-  min-width: 500px;
+  min-width: 1000px;
   position: absolute;
   left: 0px;
   top: 0px;
@@ -624,7 +641,7 @@
 
 .detail-main .preview .sp-box .sp-qj .sp-hf li img {
   width: 56px;
-  height: 56px;
+  height: 54px;
   padding: 2px;
   border: 1px solid #e7e7e7;
 }

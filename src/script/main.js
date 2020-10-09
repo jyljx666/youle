@@ -6,14 +6,16 @@ require.config({
         "pagination": './lib/pagination',
         "cookie": './lib/cookie',
         "cart_module": './cart_module',
+        "jm": './lib/jm'
     },
     shim: {
         lazyload: "jquery",
         pagination: 'jquery',
+        jm: 'jquery'
     }
 })
 
-require(['jquery', 'lazyload'], function($) {
+require(['jquery', 'lazyload', 'cookie'], function($) {
     let mod = $('#md').attr('page')
     require([mod], function(mod) {
         mod.init()
